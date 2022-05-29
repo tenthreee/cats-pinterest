@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cat Pinterest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <ul class="main-navigation__list">
+        <li>
+          <a class="main-navigation__link" href="/">Все котики</a>
+        </li>
+        <li>
+          <a class="main-navigation__link" href="/favorite">Любимые котики</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cats">
+      <ul class="cats__list">
+        <li class="cats__item card">
+          <img class="card__image" src="./img/cat.jpg" alt="Cute kitten." width="225" height="225">
+          <button class="card__favorite" type="button">
+            <span class="visually-hidden">Добавить в избранное</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
