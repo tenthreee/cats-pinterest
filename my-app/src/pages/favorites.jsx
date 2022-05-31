@@ -1,12 +1,20 @@
-import React from "react";
-import { Message, StyledSection } from "../components/cats/styles";
+import React, { useContext } from "react";
+import CatsList from "../components/cats/cats";
+import { StyledSection } from "../components/cats/styles";
+import { FavoriteCatsContext } from "../context/context";
 
 function Favorites() {
+  const {favoriteCats, toggleFavoriteCat} = useContext(FavoriteCatsContext);
+
   return (
     <StyledSection>
-      <Message>... мои любимые котики ...</Message>
+      <CatsList
+        cats={favoriteCats}
+        likedCats = {favoriteCats.map(cat => cat.id)}
+        toggleFavoriteCat={toggleFavoriteCat}
+      />
     </StyledSection>
-  )
+  );
 }
 
 export default Favorites;
