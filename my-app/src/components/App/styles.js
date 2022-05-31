@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
 html {
   height: 100%;
@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr;
 
-  min-width: 1440px;
+  min-width: 320px;
   min-height: 100%;
 
   font-family: "Roboto", "Arial", sans-serif;
