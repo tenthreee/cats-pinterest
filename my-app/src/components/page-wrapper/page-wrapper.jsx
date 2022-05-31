@@ -1,13 +1,12 @@
 import React from "react";
-import Header from "../Header/Header";
-import Cats from "../Cats/Cats";
+import Header from "../header/header";
 
-function PageWrapper() {
+function PageWrapper({children}) {
   return (
     <>
     <Header />
     <main>
-      <Cats />
+      {children}
     </main>
     </>
   );

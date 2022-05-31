@@ -1,18 +1,18 @@
 import React from "react";
-import { StyledNavList, StyledNavLink } from "./styles";
+import { StyledNav, StyledNavList, StyledNavLink } from "./styles";
 
 function Nav() {
   return (
-    <nav>
+    <StyledNav>
       <StyledNavList>
         <li>
           <StyledNavLink href="/">Все котики</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink href="/favorite">Любимые котики</StyledNavLink>
+          <StyledNavLink href="/favorites">Любимые котики</StyledNavLink>
         </li>
       </StyledNavList>
-    </nav>
+    </StyledNav>
   );
 }
 
