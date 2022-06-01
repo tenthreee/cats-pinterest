@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/cats-pinterest/static/js/main.4ce6914f.js",
+    "main.js": "/cats-pinterest/static/js/main.1fa22d23.js",
     "static/media/icon-favorite.svg": "/cats-pinterest/static/media/icon-favorite.6adfe85f8b98c6dc6b44df906a50f5eb.svg",
     "index.html": "/cats-pinterest/index.html",
     "static/media/icon-favorite-active.svg": "/cats-pinterest/static/media/icon-favorite-active.6e844464e1e159f1f41bca68b1b9c1bc.svg",
     "static/media/icon-favorite-hover.svg": "/cats-pinterest/static/media/icon-favorite-hover.8220379cb36244a7738b6600ebc04025.svg",
-    "main.4ce6914f.js.map": "/cats-pinterest/static/js/main.4ce6914f.js.map"
+    "main.1fa22d23.js.map": "/cats-pinterest/static/js/main.1fa22d23.js.map"
   },
   "entrypoints": [
-    "static/js/main.4ce6914f.js"
+    "static/js/main.1fa22d23.js"
   ]
 }
