@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { FavoriteCatsContext } from "../../context/context";
 import { GlobalStyle } from "./styles";
 import PageWrapper from "../page-wrapper/page-wrapper";
@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <FavoriteCatsContext.Provider value={{favoriteCats, toggleFavoriteCat}}>
-      <BrowserRouter>
+      <HashRouter>
         <GlobalStyle />
         <PageWrapper>
           <Routes>
@@ -38,7 +38,7 @@ export default function App() {
             <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </PageWrapper>
-      </BrowserRouter>
+      </HashRouter>
     </FavoriteCatsContext.Provider>
   );
 }

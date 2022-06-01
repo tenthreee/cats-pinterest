@@ -27,39 +27,3 @@ function MainPage() {
 }
 
 export default MainPage;
-
-
-
-
-// const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect(() => {
-  //   try {
-  //     setIsLoading(true);
-  //     getCats().then((result) => {
-  //       setCats(result)
-  //       setIsLoading(false)
-  //     })
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }, [])
-
-  //   <>
-  //   {isLoading ? (
-  //     <StyledSection>
-  //       <Message>... загружаем котиков ...</Message>
-  //     </StyledSection>
-  //   ) : (
-  //     <StyledSection>
-  //     {cats && cats.length ? (
-  //       <CatsList>
-  //         {cats.map((cat) => (
-  //           <Cat key={cat.id} cat={cat} />
-  //         ))}
-  //       </CatsList>
-  //     ) : null}
-  //     <Message>... загружаем еще котиков ...</Message>
-  //   </StyledSection>
-  //   )}
-  //   </>

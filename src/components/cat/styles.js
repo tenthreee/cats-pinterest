@@ -48,7 +48,7 @@ export const CatCard = styled.li`
   width: 225px;
   height: 225px;
 
-  :hover {
+  &:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
   }
