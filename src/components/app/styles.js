@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import FavImage from "../../assets/icon-favorite.svg";
+import FavImageFull from "../../assets/icon-favorite-hover.svg";
+import FavImageActive from "../../assets/icon-favorite-active.svg";
 
 export const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
@@ -38,7 +41,36 @@ img {
   overflow: hidden;
 }
 
-.nav-link {
+.page-header {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+}
+
+.navigation {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @media (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: 380px) {
+    display: grid;
+  }
+}
+
+.navigation__link {
   display: block;
   padding: 20px;
   color: inherit;
@@ -56,6 +88,95 @@ img {
     color: #ffffff;
     background-color: #1E88E5;
     text-decoration: none;
+  }
+}
+
+.cats {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px;
+
+  @media (max-width: 767px) {
+    padding: 40px;
+  }
+}
+
+.cats__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 225px);
+  gap: 40px;
+}
+
+.cats__message {
+  margin: 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 225px;
+  height: 225px;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
+  }
+
+  &:hover .card__button,
+  &:hover .card__button--active {
+    display: block;
+  }
+}
+
+.card__image {
+  max-width: 225px;
+  max-height: 225px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  padding: 0;
+  width: 40px;
+  height: 37px;
+  display: none;
+
+  border: none;
+  background-color: transparent;
+  background-image: url(${FavImage});
+
+  &:hover {
+    cursor: pointer;
+    background-image: url(${FavImageFull});
+  }
+
+  &--active {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 0;
+    width: 40px;
+    height: 37px;
+    display: none;
+
+    border: none;
+    background-color: transparent;
+    background-image: url(${FavImageActive});
+
+    &:hover {
+      cursor: pointer;
+      background-image: url(${FavImageFull});
+    }
   }
 }
 `;

@@ -1,12 +1,11 @@
 import React from "react";
-import { StyledList } from "./styles";
 import Cat from "../cat/cat";
 
 function CatsList({cats, toggleFavoriteCat, likedCats}) {
   return (
     <>
       {cats && cats.length ? (
-        <StyledList>
+        <ul className="cats__list">
           {cats.map((cat) => (
             <Cat
               key={cat.id}
@@ -15,7 +14,7 @@ function CatsList({cats, toggleFavoriteCat, likedCats}) {
               likedCats={likedCats}
             />
           ))}
-        </StyledList>
+        </ul>
       ) : null}
     </>
   )

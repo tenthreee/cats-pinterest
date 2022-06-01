@@ -1,19 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { StyledNav, StyledNavList } from "./styles";
 
 function Nav() {
   return (
-    <StyledNav>
-      <StyledNavList>
+    <nav className="navigation">
+      <ul className="navigation__list">
         <li>
-          <NavLink to="/" className={({isActive}) => (isActive ? "nav-link--active" : 'nav-link')}>Все котики</NavLink>
+          <NavLink to="/" className={({isActive}) => (isActive ? "navigation__link--active" : 'navigation__link')}>Все котики</NavLink>
         </li>
         <li>
-          <NavLink to="/favorites" className={({isActive}) => (isActive ? "nav-link--active" : 'nav-link')}>Любимые котики</NavLink>
+          <NavLink to="/favorites" className={({isActive}) => (isActive ? "navigation__link--active" : 'navigation__link')}>Любимые котики</NavLink>
         </li>
-      </StyledNavList>
-    </StyledNav>
+      </ul>
+    </nav>
   );
 }
 

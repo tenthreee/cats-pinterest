@@ -1,21 +1,20 @@
 import React from "react";
-import { CatCard, CatImage, StyledButton, StyledButtonActive } from "./styles";
 
 function Cat({cat, toggleFavoriteCat, likedCats}) {
   return (
-    <CatCard key={cat.id}>
-      <CatImage src={cat.url} alt="Cute cat." width="225" height="225" />
+    <li className="card" key={cat.id}>
+      <img className="card__image" src={cat.url} alt="Cute cat." width="225" height="225" />
 
       {likedCats.indexOf(cat.id) === -1 ? (
-        <StyledButton type="button" onClick={() => toggleFavoriteCat(cat)}>
+        <button className="card__button" type="button" onClick={() => toggleFavoriteCat(cat)}>
           <span className="visually-hidden">Добавить в избранное</span>
-        </StyledButton>
+        </button>
       ) : (
-        <StyledButtonActive type="button" onClick={() => toggleFavoriteCat(cat)}>
+        <button className="card__button--active" type="button" onClick={() => toggleFavoriteCat(cat)}>
           <span className="visually-hidden">Добавить в избранное</span>
-        </StyledButtonActive>
+        </button>
       ) }
-    </CatCard>
+    </li>
   )
 }
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import getCats from "../api/cats-api";
 import CatsList from "../components/cats/cats";
-import { Message, StyledSection } from "../components/cats/styles";
 import { FavoriteCatsContext } from "../context/context";
 
 function MainPage() {
@@ -15,14 +14,14 @@ function MainPage() {
   }, [])
 
   return (
-    <StyledSection>
+    <section className="cats">
       <CatsList
         cats={cats}
         likedCats = {favoriteCats.map(cat => cat.id)}
         toggleFavoriteCat={toggleFavoriteCat}
         />
-      <Message>... загружаем ещё котиков ...</Message>
-    </StyledSection>
+      <p className="cats__message">... загружаем ещё котиков ...</p>
+    </section>
   );
 }
 
