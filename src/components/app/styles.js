@@ -75,6 +75,7 @@ img {
   padding: 20px;
   color: inherit;
   text-decoration: none;
+  transition: 0.3s;
 
   &:hover,
   &:focus {
@@ -121,6 +122,7 @@ img {
   position: relative;
   width: 225px;
   height: 225px;
+  transition: 0.3s;
 
   &:hover {
     transform: scale(1.1);
@@ -128,7 +130,8 @@ img {
   }
 
   &:hover .card__button,
-  &:hover .card__button--active {
+  &:hover .card__button--active,
+  &:hover .card__gradient {
     display: block;
   }
 }
@@ -138,6 +141,15 @@ img {
   max-height: 225px;
   height: 100%;
   object-fit: cover;
+}
+
+.card__gradient {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 58.85%);
 }
 
 .card__button {
@@ -153,6 +165,7 @@ img {
   border: none;
   background-color: transparent;
   background-image: url(${FavImage});
+  transition: 0.3s;
 
   &:hover {
     cursor: pointer;
@@ -172,6 +185,7 @@ img {
     border: none;
     background-color: transparent;
     background-image: url(${FavImageActive});
+    transition: 0.3s;
 
     &:hover {
       cursor: pointer;
