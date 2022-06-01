@@ -5,6 +5,7 @@ import { GlobalStyle } from "./styles";
 import PageWrapper from "../page-wrapper/page-wrapper";
 import MainPage from "../../pages/main-page";
 import Favorites from "../../pages/favorites";
+import NoPage from "../../pages/404";
 
 export default function App() {
   const [favoriteCats, setFavoriteCats] = useState([]);
@@ -36,6 +37,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="*" element={<NoPage />} />
           </Routes>
         </PageWrapper>
       </HashRouter>
