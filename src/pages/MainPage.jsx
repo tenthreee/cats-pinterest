@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import getCats from "../api/cats-api";
-import CatsList from "../components/cats/cats";
+import CatsList from "../components/CatsList/CatsList";
 import { FavoriteCatsContext } from "../context/context";
 
 function MainPage() {

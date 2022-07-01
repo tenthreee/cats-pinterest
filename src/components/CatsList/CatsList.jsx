@@ -1,5 +1,6 @@
 import React from "react";
-import Cat from "../cat/cat";
+import Cat from "../Cat/Cat";
+import './CatsList.scss';
 
 function CatsList({cats, toggleFavoriteCat, likedCats}) {
   return (

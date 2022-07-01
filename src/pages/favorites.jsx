@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import CatsList from "../components/cats/cats";
+import CatsList from "../components/CatsList/CatsList";
 import { FavoriteCatsContext } from "../context/context";
 
 function Favorites() {

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { FavoriteCatsContext } from "../../context/context";
-import { GlobalStyle } from "./styles";
-import PageWrapper from "../page-wrapper/page-wrapper";
-import MainPage from "../../pages/main-page";
-import Favorites from "../../pages/favorites";
+import PageWrapper from "../PageWrapper/PageWrapper";
+import MainPage from "../../pages/MainPage";
+import Favorites from "../../pages/Favorites";
 import NoPage from "../../pages/404";
+import './App.scss';
 
 export default function App() {
   const [favoriteCats, setFavoriteCats] = useState([]);
@@ -32,7 +32,6 @@ export default function App() {
   return (
     <FavoriteCatsContext.Provider value={{favoriteCats, toggleFavoriteCat}}>
       <HashRouter>
-        <GlobalStyle />
         <PageWrapper>
           <Routes>
             <Route path="/" element={<MainPage />} />
