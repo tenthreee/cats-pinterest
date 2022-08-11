@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { FavoriteCatsContext } from "../../context/context";
+import { FavoriteCatsContext } from "../../context/FavoriteCatsContext";
 import PageWrapper from "../PageWrapper/PageWrapper";
 import MainPage from "../../pages/MainPage";
 import Favorites from "../../pages/Favorites";
-import NoPage from "../../pages/404";
+import PageNotFound from "../../pages/PageNotFound";
 import './App.scss';
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 
   useEffect(() => {
     if (localStorage.getItem('favoriteCats')) {
-        setFavoriteCats(JSON.parse(localStorage.getItem('favoriteCats')))
+      setFavoriteCats(JSON.parse(localStorage.getItem('favoriteCats')))
     }
   }, [])
 
@@ -20,9 +20,9 @@ export default function App() {
     let likedCats;
 
     if (favoriteCats.map(c => c.id).indexOf(cat.id) === -1) {
-        likedCats = [...favoriteCats, cat];
+      likedCats = [...favoriteCats, cat];
     } else {
-        likedCats = favoriteCats.filter(c => c.id !== cat.id)
+      likedCats = favoriteCats.filter(c => c.id !== cat.id)
     }
 
     setFavoriteCats(likedCats);
@@ -36,7 +36,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/favorites" element={<Favorites />} />
-            <Route path="*" element={<NoPage />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </PageWrapper>
       </HashRouter>

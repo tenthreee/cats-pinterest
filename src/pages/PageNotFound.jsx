@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NoPage() {
+function PageNotFound() {
   return (
     <section className="cats">
       <h1>404.
@@ -13,4 +13,4 @@ function NoPage() {
   )
 }
 
-export default NoPage;
+export default PageNotFound;

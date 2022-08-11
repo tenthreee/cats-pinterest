@@ -7,4 +7,4 @@ https://tenthreee.github.io/cats-pinterest/
 - На вкладке «Любимые котики» можно посмотреть добавленных в любимые котиков.
 - Интерфейс приложения адаптируется под ширину вьюпорта.
 
-JavaScript・React・CSS-in-JS・React Router・React Hooks
+JavaScript・React・CSS Modules・React Router・React Hooks
