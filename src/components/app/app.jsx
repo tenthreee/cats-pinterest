@@ -5,6 +5,7 @@ import PageWrapper from "../PageWrapper/PageWrapper";
 import MainPage from "../../pages/MainPage";
 import Favorites from "../../pages/Favorites";
 import PageNotFound from "../../pages/PageNotFound";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import './App.scss';
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
   return (
     <FavoriteCatsContext.Provider value={{favoriteCats, toggleFavoriteCat}}>
       <HashRouter>
+        <ScrollToTop />
         <PageWrapper>
           <Routes>
             <Route path="/" element={<MainPage />} />

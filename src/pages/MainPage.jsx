@@ -11,13 +11,13 @@ function MainPage() {
     getCats().then((data) => {
       setCats(data)
     })
-  }, [])
+  }, []);
 
   return (
     <section className="cats">
       <CatsList
         cats={cats}
-        likedCats = {favoriteCats.map(cat => cat.id)}
+        likedCats={favoriteCats.map(cat => cat.id)}
         toggleFavoriteCat={toggleFavoriteCat}
       />
       <p className="cats__message">... загружаем ещё котиков ...</p>
